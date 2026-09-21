@@ -1,0 +1,1498 @@
+[
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "green"
+   }
+  ],
+  "edges": [],
+  "caption": "path=[] \u2192 record as a subset"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   }
+  ],
+  "caption": "choose 1 \u2192 path=[1]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   }
+  ],
+  "caption": "path=[1] \u2192 record as a subset"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   }
+  ],
+  "caption": "choose 2 \u2192 path=[1, 2]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   }
+  ],
+  "caption": "path=[1, 2] \u2192 record as a subset"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   }
+  ],
+  "caption": "choose 3 \u2192 path=[1, 2, 3]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   }
+  ],
+  "caption": "path=[1, 2, 3] \u2192 record as a subset"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "orange"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   }
+  ],
+  "caption": "backtrack: undo choice, path=[1, 2]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "orange"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   }
+  ],
+  "caption": "backtrack: undo choice, path=[1]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   }
+  ],
+  "caption": "choose 3 \u2192 path=[1, 3]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   }
+  ],
+  "caption": "path=[1, 3] \u2192 record as a subset"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "orange"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   }
+  ],
+  "caption": "backtrack: undo choice, path=[1]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "orange"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   }
+  ],
+  "caption": "backtrack: undo choice, path=[]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   }
+  ],
+  "caption": "choose 2 \u2192 path=[2]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   }
+  ],
+  "caption": "path=[2] \u2192 record as a subset"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "2,3",
+    "label": "2,3",
+    "x": 1.8,
+    "y": 1.2000000000000002,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "2,3",
+    "color": "border"
+   }
+  ],
+  "caption": "choose 3 \u2192 path=[2, 3]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "2,3",
+    "label": "2,3",
+    "x": 1.8,
+    "y": 1.2000000000000002,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "2,3",
+    "color": "border"
+   }
+  ],
+  "caption": "path=[2, 3] \u2192 record as a subset"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "orange"
+   },
+   {
+    "id": "2,3",
+    "label": "2,3",
+    "x": 1.8,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "2,3",
+    "color": "border"
+   }
+  ],
+  "caption": "backtrack: undo choice, path=[2]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "orange"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "2,3",
+    "label": "2,3",
+    "x": 1.8,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "2,3",
+    "color": "border"
+   }
+  ],
+  "caption": "backtrack: undo choice, path=[]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "2,3",
+    "label": "2,3",
+    "x": 1.8,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 2.2,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "2,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "3",
+    "color": "border"
+   }
+  ],
+  "caption": "choose 3 \u2192 path=[3]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "2,3",
+    "label": "2,3",
+    "x": 1.8,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 2.2,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "2,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "3",
+    "color": "border"
+   }
+  ],
+  "caption": "path=[3] \u2192 record as a subset"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "orange"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "2,3",
+    "label": "2,3",
+    "x": 1.8,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 2.2,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "2,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "3",
+    "color": "border"
+   }
+  ],
+  "caption": "backtrack: undo choice, path=[]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "\u2205",
+    "label": "\u2205",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7999999999999998,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1,2",
+    "label": "1,2",
+    "x": 0.7333333333333332,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "1,2,3",
+    "label": "1,2,3",
+    "x": -0.06666666666666687,
+    "y": 0.20000000000000018,
+    "color": "surface"
+   },
+   {
+    "id": "1,3",
+    "label": "1,3",
+    "x": 1.7999999999999998,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 2.6,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "2,3",
+    "label": "2,3",
+    "x": 1.8,
+    "y": 1.2000000000000002,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 2.2,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "\u2205",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,2",
+    "color": "border"
+   },
+   {
+    "from": "1,2",
+    "to": "1,2,3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "1,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "2,3",
+    "color": "border"
+   },
+   {
+    "from": "\u2205",
+    "to": "3",
+    "color": "border"
+   }
+  ],
+  "caption": "Done \u2014 8 subsets found: [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]"
+ }
+]

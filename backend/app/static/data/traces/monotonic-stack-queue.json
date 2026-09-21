@@ -1,0 +1,348 @@
+[
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 0,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [0]"
+  ],
+  "arrows": [],
+  "caption": "push day 0 (73\u00b0) onto the stack (waiting for a warmer day)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 1,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): []"
+  ],
+  "arrows": [],
+  "caption": "day 1 (74\u00b0): warmer than top of stack \u2014 pop & resolve: idx0(73)\u2192waits 1d"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 1,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [1]"
+  ],
+  "arrows": [],
+  "caption": "push day 1 (74\u00b0) onto the stack (waiting for a warmer day)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 2,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): []"
+  ],
+  "arrows": [],
+  "caption": "day 2 (75\u00b0): warmer than top of stack \u2014 pop & resolve: idx1(74)\u2192waits 1d"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 2,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [2]"
+  ],
+  "arrows": [],
+  "caption": "push day 2 (75\u00b0) onto the stack (waiting for a warmer day)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 3,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [2, 3]"
+  ],
+  "arrows": [],
+  "caption": "push day 3 (71\u00b0) onto the stack (waiting for a warmer day)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 4,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [2, 3, 4]"
+  ],
+  "arrows": [],
+  "caption": "push day 4 (69\u00b0) onto the stack (waiting for a warmer day)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 5,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [2]"
+  ],
+  "arrows": [],
+  "caption": "day 5 (72\u00b0): warmer than top of stack \u2014 pop & resolve: idx4(69)\u2192waits 1d, idx3(71)\u2192waits 2d"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 5,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [2, 5]"
+  ],
+  "arrows": [],
+  "caption": "push day 5 (72\u00b0) onto the stack (waiting for a warmer day)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 6,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): []"
+  ],
+  "arrows": [],
+  "caption": "day 6 (76\u00b0): warmer than top of stack \u2014 pop & resolve: idx5(72)\u2192waits 1d, idx2(75)\u2192waits 4d"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 6,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [6]"
+  ],
+  "arrows": [],
+  "caption": "push day 6 (76\u00b0) onto the stack (waiting for a warmer day)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 7,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "stack (indices): [6, 7]"
+  ],
+  "arrows": [],
+  "caption": "push day 7 (73\u00b0) onto the stack (waiting for a warmer day)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "73",
+   "74",
+   "75",
+   "71",
+   "69",
+   "72",
+   "76",
+   "73"
+  ],
+  "pointers": [],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "answer: [1, 1, 4, 2, 1, 1, 0, 0]"
+  ],
+  "arrows": [],
+  "caption": "Done \u2014 days to wait for warmer temp: [1, 1, 4, 2, 1, 1, 0, 0]"
+ }
+]

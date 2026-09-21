@@ -1,0 +1,388 @@
+[
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "5",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "accent"
+   }
+  ],
+  "edges": [],
+  "caption": "insert 5 at the end (index 0)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "5",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "3",
+    "x": 1.0,
+    "y": 2.1,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 3 at the end (index 1)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "3",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "orange"
+   },
+   {
+    "id": "1",
+    "label": "5",
+    "x": 1.0,
+    "y": 2.1,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   }
+  ],
+  "caption": "3 < parent-slot value \u2192 sift up: swap with parent (index 0)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "3",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "5",
+    "x": 1.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "8",
+    "x": 5.0,
+    "y": 2.1,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "0",
+    "to": "2",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 8 at the end (index 2)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "3",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "5",
+    "x": 1.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "8",
+    "x": 5.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "1",
+    "x": 0.0,
+    "y": 1.0,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "0",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "3",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 1 at the end (index 3)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "3",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.0,
+    "y": 2.1,
+    "color": "orange"
+   },
+   {
+    "id": "2",
+    "label": "8",
+    "x": 5.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "5",
+    "x": 0.0,
+    "y": 1.0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "0",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "3",
+    "color": "border"
+   }
+  ],
+  "caption": "1 < parent-slot value \u2192 sift up: swap with parent (index 1)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "1",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "orange"
+   },
+   {
+    "id": "1",
+    "label": "3",
+    "x": 1.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "8",
+    "x": 5.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "5",
+    "x": 0.0,
+    "y": 1.0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "0",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "3",
+    "color": "border"
+   }
+  ],
+  "caption": "1 < parent-slot value \u2192 sift up: swap with parent (index 0)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "1",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "3",
+    "x": 1.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "8",
+    "x": 5.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "5",
+    "x": 0.0,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "4",
+    "label": "9",
+    "x": 2.0,
+    "y": 1.0,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "0",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "4",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 9 at the end (index 4)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "1",
+    "x": 3.0,
+    "y": 3.2,
+    "color": "green"
+   },
+   {
+    "id": "1",
+    "label": "3",
+    "x": 1.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "8",
+    "x": 5.0,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "5",
+    "x": 0.0,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "4",
+    "label": "9",
+    "x": 2.0,
+    "y": 1.0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "0",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "3",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "4",
+    "color": "border"
+   }
+  ],
+  "caption": "Min-heap complete \u2014 root 1 is the minimum. Array form: [1, 3, 8, 5, 9]"
+ }
+]

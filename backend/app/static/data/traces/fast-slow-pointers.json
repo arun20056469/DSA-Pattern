@@ -1,0 +1,482 @@
+[
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 1.3471114790620887e-16,
+    "y": -2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.905255888325765,
+    "y": -1.1,
+    "color": "green"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.9052558883257653,
+    "y": 1.0999999999999996,
+    "color": "orange"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 1.3471114790620887e-16,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": -1.9052558883257649,
+    "y": 1.1000000000000008,
+    "color": "surface"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": -1.905255888325765,
+    "y": -1.1000000000000003,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "border"
+   },
+   {
+    "from": "3",
+    "to": "4",
+    "color": "border"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "border"
+   },
+   {
+    "from": "5",
+    "to": "0",
+    "color": "border"
+   }
+  ],
+  "caption": "Step 1: slow moves 1 \u2192 node 1; fast moves 2 \u2192 node 2"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 1.3471114790620887e-16,
+    "y": -2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.905255888325765,
+    "y": -1.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.9052558883257653,
+    "y": 1.0999999999999996,
+    "color": "green"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 1.3471114790620887e-16,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": -1.9052558883257649,
+    "y": 1.1000000000000008,
+    "color": "orange"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": -1.905255888325765,
+    "y": -1.1000000000000003,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "border"
+   },
+   {
+    "from": "3",
+    "to": "4",
+    "color": "border"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "border"
+   },
+   {
+    "from": "5",
+    "to": "0",
+    "color": "border"
+   }
+  ],
+  "caption": "Step 2: slow moves 1 \u2192 node 2; fast moves 2 \u2192 node 4"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 1.3471114790620887e-16,
+    "y": -2.2,
+    "color": "orange"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.905255888325765,
+    "y": -1.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.9052558883257653,
+    "y": 1.0999999999999996,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 1.3471114790620887e-16,
+    "y": 2.2,
+    "color": "green"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": -1.9052558883257649,
+    "y": 1.1000000000000008,
+    "color": "surface"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": -1.905255888325765,
+    "y": -1.1000000000000003,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "border"
+   },
+   {
+    "from": "3",
+    "to": "4",
+    "color": "border"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "border"
+   },
+   {
+    "from": "5",
+    "to": "0",
+    "color": "border"
+   }
+  ],
+  "caption": "Step 3: slow moves 1 \u2192 node 3; fast moves 2 \u2192 node 0"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 1.3471114790620887e-16,
+    "y": -2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.905255888325765,
+    "y": -1.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.9052558883257653,
+    "y": 1.0999999999999996,
+    "color": "orange"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 1.3471114790620887e-16,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": -1.9052558883257649,
+    "y": 1.1000000000000008,
+    "color": "green"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": -1.905255888325765,
+    "y": -1.1000000000000003,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "border"
+   },
+   {
+    "from": "3",
+    "to": "4",
+    "color": "border"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "border"
+   },
+   {
+    "from": "5",
+    "to": "0",
+    "color": "border"
+   }
+  ],
+  "caption": "Step 4: slow moves 1 \u2192 node 4; fast moves 2 \u2192 node 2"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 1.3471114790620887e-16,
+    "y": -2.2,
+    "color": "surface"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.905255888325765,
+    "y": -1.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.9052558883257653,
+    "y": 1.0999999999999996,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 1.3471114790620887e-16,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": -1.9052558883257649,
+    "y": 1.1000000000000008,
+    "color": "orange"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": -1.905255888325765,
+    "y": -1.1000000000000003,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "border"
+   },
+   {
+    "from": "3",
+    "to": "4",
+    "color": "border"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "border"
+   },
+   {
+    "from": "5",
+    "to": "0",
+    "color": "border"
+   }
+  ],
+  "caption": "Step 5: slow moves 1 \u2192 node 5; fast moves 2 \u2192 node 4"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 1.3471114790620887e-16,
+    "y": -2.2,
+    "color": "red"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.905255888325765,
+    "y": -1.1,
+    "color": "surface"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.9052558883257653,
+    "y": 1.0999999999999996,
+    "color": "surface"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 1.3471114790620887e-16,
+    "y": 2.2,
+    "color": "surface"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": -1.9052558883257649,
+    "y": 1.1000000000000008,
+    "color": "surface"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": -1.905255888325765,
+    "y": -1.1000000000000003,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "border"
+   },
+   {
+    "from": "1",
+    "to": "2",
+    "color": "border"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "border"
+   },
+   {
+    "from": "3",
+    "to": "4",
+    "color": "border"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "border"
+   },
+   {
+    "from": "5",
+    "to": "0",
+    "color": "border"
+   }
+  ],
+  "caption": "Step 6: slow=0, fast=0 \u2014 they meet! Cycle detected."
+ }
+]

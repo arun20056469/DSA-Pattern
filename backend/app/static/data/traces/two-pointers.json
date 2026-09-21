@@ -1,0 +1,212 @@
+[
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "3",
+   "5",
+   "6",
+   "8",
+   "9"
+  ],
+  "pointers": [
+   {
+    "index": 0,
+    "label": "L",
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "label": "R",
+    "color": "orange"
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "color": "orange"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "nums[0]+nums[5] = 1+9 = 10 vs target 14"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "3",
+   "5",
+   "6",
+   "8",
+   "9"
+  ],
+  "pointers": [
+   {
+    "index": 0,
+    "label": "L",
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "label": "R",
+    "color": "orange"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "10 < 14 \u2192 sum too small, move L right to increase it"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "3",
+   "5",
+   "6",
+   "8",
+   "9"
+  ],
+  "pointers": [
+   {
+    "index": 1,
+    "label": "L",
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "label": "R",
+    "color": "orange"
+   }
+  ],
+  "highlights": [
+   {
+    "index": 1,
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "color": "orange"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "nums[1]+nums[5] = 3+9 = 12 vs target 14"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "3",
+   "5",
+   "6",
+   "8",
+   "9"
+  ],
+  "pointers": [
+   {
+    "index": 1,
+    "label": "L",
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "label": "R",
+    "color": "orange"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "12 < 14 \u2192 sum too small, move L right to increase it"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "3",
+   "5",
+   "6",
+   "8",
+   "9"
+  ],
+  "pointers": [
+   {
+    "index": 2,
+    "label": "L",
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "label": "R",
+    "color": "orange"
+   }
+  ],
+  "highlights": [
+   {
+    "index": 2,
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "color": "orange"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "nums[2]+nums[5] = 5+9 = 14 vs target 14"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "3",
+   "5",
+   "6",
+   "8",
+   "9"
+  ],
+  "pointers": [
+   {
+    "index": 2,
+    "label": "L",
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "label": "R",
+    "color": "orange"
+   }
+  ],
+  "highlights": [
+   {
+    "index": 2,
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "Sum equals target \u2192 found pair (2, 5)!"
+ }
+]

@@ -1,0 +1,313 @@
+[
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "map",
+    "label": "map: {}",
+    "x": -2.6,
+    "y": 0,
+    "color": "surface2"
+   }
+  ],
+  "edges": [],
+  "caption": "Empty LRU cache (capacity 3): hash map + doubly linked list ordered by recency"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "map",
+    "label": "map: {1: 1}",
+    "x": -2.6,
+    "y": 0,
+    "color": "surface2"
+   },
+   {
+    "id": "n1",
+    "label": "1:1",
+    "x": 0.5,
+    "y": 0,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "map",
+    "to": "n1",
+    "color": "muted"
+   }
+  ],
+  "caption": "put(1,1): insert/move 1 to the front (most recently used)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "map",
+    "label": "map: {1: 1, 2: 2}",
+    "x": -2.6,
+    "y": 0,
+    "color": "surface2"
+   },
+   {
+    "id": "n2",
+    "label": "2:2",
+    "x": 0.5,
+    "y": 0,
+    "color": "accent"
+   },
+   {
+    "id": "n1",
+    "label": "1:1",
+    "x": 2.1,
+    "y": 0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "n2",
+    "to": "n1",
+    "color": "border"
+   },
+   {
+    "from": "map",
+    "to": "n2",
+    "color": "muted"
+   }
+  ],
+  "caption": "put(2,2): insert/move 2 to the front (most recently used)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "map",
+    "label": "map: {1: 1, 2: 2}",
+    "x": -2.6,
+    "y": 0,
+    "color": "surface2"
+   },
+   {
+    "id": "n1",
+    "label": "1:1",
+    "x": 0.5,
+    "y": 0,
+    "color": "accent"
+   },
+   {
+    "id": "n2",
+    "label": "2:2",
+    "x": 2.1,
+    "y": 0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "n1",
+    "to": "n2",
+    "color": "border"
+   },
+   {
+    "from": "map",
+    "to": "n1",
+    "color": "muted"
+   }
+  ],
+  "caption": "get(1) = 1: move 1 to the front (just used)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "map",
+    "label": "map: {1: 1, 2: 2, 3: 3}",
+    "x": -2.6,
+    "y": 0,
+    "color": "surface2"
+   },
+   {
+    "id": "n3",
+    "label": "3:3",
+    "x": 0.5,
+    "y": 0,
+    "color": "accent"
+   },
+   {
+    "id": "n1",
+    "label": "1:1",
+    "x": 2.1,
+    "y": 0,
+    "color": "surface"
+   },
+   {
+    "id": "n2",
+    "label": "2:2",
+    "x": 3.7,
+    "y": 0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "n3",
+    "to": "n1",
+    "color": "border"
+   },
+   {
+    "from": "n1",
+    "to": "n2",
+    "color": "border"
+   },
+   {
+    "from": "map",
+    "to": "n3",
+    "color": "muted"
+   }
+  ],
+  "caption": "put(3,3): insert/move 3 to the front (most recently used)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "map",
+    "label": "map: {1: 1, 3: 3}",
+    "x": -2.6,
+    "y": 0,
+    "color": "surface2"
+   },
+   {
+    "id": "n3",
+    "label": "3:3",
+    "x": 0.5,
+    "y": 0,
+    "color": "green"
+   },
+   {
+    "id": "n1",
+    "label": "1:1",
+    "x": 2.1,
+    "y": 0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "n3",
+    "to": "n1",
+    "color": "border"
+   },
+   {
+    "from": "map",
+    "to": "n3",
+    "color": "muted"
+   }
+  ],
+  "caption": "put(4,4): cache full \u2192 evict least-recently-used key 2"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "map",
+    "label": "map: {1: 1, 3: 3, 4: 4}",
+    "x": -2.6,
+    "y": 0,
+    "color": "surface2"
+   },
+   {
+    "id": "n4",
+    "label": "4:4",
+    "x": 0.5,
+    "y": 0,
+    "color": "accent"
+   },
+   {
+    "id": "n3",
+    "label": "3:3",
+    "x": 2.1,
+    "y": 0,
+    "color": "surface"
+   },
+   {
+    "id": "n1",
+    "label": "1:1",
+    "x": 3.7,
+    "y": 0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "n4",
+    "to": "n3",
+    "color": "border"
+   },
+   {
+    "from": "n3",
+    "to": "n1",
+    "color": "border"
+   },
+   {
+    "from": "map",
+    "to": "n4",
+    "color": "muted"
+   }
+  ],
+  "caption": "put(4,4): insert/move 4 to the front (most recently used)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "map",
+    "label": "map: {1: 1, 3: 3, 4: 4}",
+    "x": -2.6,
+    "y": 0,
+    "color": "surface2"
+   },
+   {
+    "id": "n4",
+    "label": "4:4",
+    "x": 0.5,
+    "y": 0,
+    "color": "green"
+   },
+   {
+    "id": "n3",
+    "label": "3:3",
+    "x": 2.1,
+    "y": 0,
+    "color": "surface"
+   },
+   {
+    "id": "n1",
+    "label": "1:1",
+    "x": 3.7,
+    "y": 0,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "n4",
+    "to": "n3",
+    "color": "border"
+   },
+   {
+    "from": "n3",
+    "to": "n1",
+    "color": "border"
+   },
+   {
+    "from": "map",
+    "to": "n4",
+    "color": "muted"
+   }
+  ],
+  "caption": "get(2): not found \u2192 -1"
+ }
+]

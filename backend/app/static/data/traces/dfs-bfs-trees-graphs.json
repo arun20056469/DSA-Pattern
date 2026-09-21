@@ -1,0 +1,785 @@
+[
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "surface"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "DFS: start with A on the stack."
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "accent"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "visit A (DFS goes as deep as possible before backtracking)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "accent"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "visit B (DFS goes as deep as possible before backtracking)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "accent"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "visit D (DFS goes as deep as possible before backtracking)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "accent"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "visit E (DFS goes as deep as possible before backtracking)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "accent"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "surface"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "visit C (DFS goes as deep as possible before backtracking)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "accent"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "visit F (DFS goes as deep as possible before backtracking)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "visit G (DFS goes as deep as possible before backtracking)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A",
+    "x": 2.7,
+    "y": 3.0,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B",
+    "x": 1.3,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C",
+    "x": 4.1,
+    "y": 1.9,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D",
+    "x": 0.6,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "E",
+    "label": "E",
+    "x": 2.0,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "F",
+    "label": "F",
+    "x": 3.4,
+    "y": 0.8,
+    "color": "green"
+   },
+   {
+    "id": "G",
+    "label": "G",
+    "x": 4.8,
+    "y": 0.8,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border"
+   },
+   {
+    "from": "B",
+    "to": "E",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "F",
+    "color": "border"
+   },
+   {
+    "from": "C",
+    "to": "G",
+    "color": "border"
+   }
+  ],
+  "caption": "DFS order: A \u2192 B \u2192 D \u2192 E \u2192 C \u2192 F \u2192 G"
+ }
+]

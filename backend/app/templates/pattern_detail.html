@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}{{ pattern.name }} · DSA Patterns{% endblock %}
+{% block content %}
+<a class="back-link" href="/patterns">&larr; All patterns</a>
+<h1>{{ pattern.name }}</h1>
+
+<section class="explainer">
+    <p>{{ pattern.short_description }}</p>
+    <div class="diagram-wrap">
+        <img class="diagram-img" src="/static/img/patterns/{{ pattern.slug }}.svg" alt="Visual diagram of the {{ pattern.name }} pattern" loading="lazy">
+    </div>
+    <h3>Step-by-step walkthrough</h3>
+    <div class="viz-shell" id="pattern-visualizer"></div>
+    <div class="explainer-grid">
+        <div>
+            <h3>When to use it</h3>
+            <p>{{ pattern.when_to_use }}</p>
+        </div>
+        <div>
+            <h3>How to recognize it</h3>
+            <p>{{ pattern.recognition_tips }}</p>
+        </div>
+        <div>
+            <h3>Complexity</h3>
+            <p>{{ pattern.complexity }}</p>
+        </div>
+    </div>
+    {% if pattern.template_code %}
+    <h3>Template</h3>
+    <pre class="code-block"><code>{{ pattern.template_code }}</code></pre>
+    {% endif %}
+</section>
+
+{% if problems or filters.difficulty or filters.status or filters.q %}
+<section class="problems-section">
+    <div class="section-header">
+        <h2>Problems ({{ problems|length }})</h2>
+        <form class="filters" method="get">
+            <input type="text" name="q" placeholder="Search..." value="{{ filters.q }}">
+            <select name="difficulty">
+                <option value="">All difficulties</option>
+                <option value="Easy" {% if filters.difficulty == "Easy" %}selected{% endif %}>Easy</option>
+                <option value="Medium" {% if filters.difficulty == "Medium" %}selected{% endif %}>Medium</option>
+                <option value="Hard" {% if filters.difficulty == "Hard" %}selected{% endif %}>Hard</option>
+            </select>
+            <select name="status">
+                <option value="">All statuses</option>
+                <option value="not_started" {% if filters.status == "not_started" %}selected{% endif %}>Not started</option>
+                <option value="attempted" {% if filters.status == "attempted" %}selected{% endif %}>Attempted</option>
+                <option value="solved" {% if filters.status == "solved" %}selected{% endif %}>Solved</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <table class="problems-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Difficulty</th>
+                <th>Hint</th>
+                <th>Status</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for problem in problems %}
+            {% set current_status = problem.progress.status.value if problem.progress else "not_started" %}
+            <tr data-problem-id="{{ problem.id }}">
+                <td>{{ loop.index }}</td>
+                <td>
+                    <a href="{{ problem.leetcode_url }}" target="_blank" rel="noopener noreferrer">
+                        {{ problem.name }}
+                    </a>
+                </td>
+                <td><span class="difficulty diff-{{ problem.difficulty.value|lower }}">{{ problem.difficulty.value }}</span></td>
+                <td class="hint-cell">{{ problem.hint }}</td>
+                <td>
+                    <select class="status-select" data-problem-id="{{ problem.id }}">
+                        <option value="not_started" {% if current_status == "not_started" %}selected{% endif %}>Not started</option>
+                        <option value="attempted" {% if current_status == "attempted" %}selected{% endif %}>Attempted</option>
+                        <option value="solved" {% if current_status == "solved" %}selected{% endif %}>Solved</option>
+                    </select>
+                </td>
+                <td>
+                    <button class="notes-toggle" data-problem-id="{{ problem.id }}">Notes</button>
+                    <div class="notes-panel" data-problem-id="{{ problem.id }}" hidden>
+                        <textarea class="notes-textarea" data-problem-id="{{ problem.id }}" rows="3">{{ problem.progress.notes if problem.progress else "" }}</textarea>
+                        <button class="notes-save" data-problem-id="{{ problem.id }}">Save</button>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% else %}
+<section class="empty-state">
+    <p>No problems seeded for this pattern yet. Add some via <code>backend/app/seed/patterns_seed.json</code>
+       or import a CSV with <code>python -m app.import_csv your_file.csv</code>.</p>
+</section>
+{% endif %}
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/visualizer.js"></script>
+<script>
+    PatternVisualizer.init("pattern-visualizer", "/static/data/traces/{{ pattern.slug }}.json");
+</script>
+{% endblock %}

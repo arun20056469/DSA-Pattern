@@ -1,0 +1,114 @@
+[
+ {
+  "type": "array",
+  "values": [
+   "{"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 0,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "'{' is an opener \u2192 push onto stack"
+ },
+ {
+  "type": "array",
+  "values": [
+   "{",
+   "["
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 1,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "'[' is an opener \u2192 push onto stack"
+ },
+ {
+  "type": "array",
+  "values": [
+   "{",
+   "[",
+   "("
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 2,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "'(' is an opener \u2192 push onto stack"
+ },
+ {
+  "type": "array",
+  "values": [
+   "{",
+   "[",
+   "("
+  ],
+  "pointers": [],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "')' is a closer \u2192 pop '(', expect '(' \u2014 match!"
+ },
+ {
+  "type": "array",
+  "values": [
+   "{",
+   "["
+  ],
+  "pointers": [],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "']' is a closer \u2192 pop '[', expect '[' \u2014 match!"
+ },
+ {
+  "type": "array",
+  "values": [
+   "{"
+  ],
+  "pointers": [],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "'}' is a closer \u2192 pop '{', expect '{' \u2014 match!"
+ },
+ {
+  "type": "array",
+  "values": [
+   "(empty)"
+  ],
+  "pointers": [],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "Stack is empty at the end \u2192 all brackets matched \u2192 VALID"
+ }
+]

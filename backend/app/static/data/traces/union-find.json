@@ -1,0 +1,371 @@
+[
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 0.6,
+    "y": 1.6,
+    "color": "accent"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7,
+    "y": 2.3,
+    "color": "green"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.7,
+    "y": 0.9,
+    "color": "orange"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 1.6,
+    "color": "red"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": 4.4,
+    "y": 2.3,
+    "color": "#c084fc"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": 4.4,
+    "y": 0.9,
+    "color": "#22d3ee"
+   }
+  ],
+  "edges": [],
+  "caption": "6 elements, each its own component (0)(1)(2)(3)(4)(5)"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 0.6,
+    "y": 1.6,
+    "color": "accent"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7,
+    "y": 2.3,
+    "color": "accent"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.7,
+    "y": 0.9,
+    "color": "green"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 1.6,
+    "color": "orange"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": 4.4,
+    "y": 2.3,
+    "color": "red"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": 4.4,
+    "y": 0.9,
+    "color": "#c084fc"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "accent"
+   }
+  ],
+  "caption": "union(0,1): root(0)=0, root(1)=1 \u2192 merged"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 0.6,
+    "y": 1.6,
+    "color": "accent"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7,
+    "y": 2.3,
+    "color": "accent"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.7,
+    "y": 0.9,
+    "color": "green"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 1.6,
+    "color": "green"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": 4.4,
+    "y": 2.3,
+    "color": "orange"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": 4.4,
+    "y": 0.9,
+    "color": "red"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "accent"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "accent"
+   }
+  ],
+  "caption": "union(2,3): root(2)=2, root(3)=3 \u2192 merged"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 0.6,
+    "y": 1.6,
+    "color": "accent"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7,
+    "y": 2.3,
+    "color": "accent"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.7,
+    "y": 0.9,
+    "color": "green"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 1.6,
+    "color": "green"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": 4.4,
+    "y": 2.3,
+    "color": "orange"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": 4.4,
+    "y": 0.9,
+    "color": "orange"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "accent"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "accent"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "accent"
+   }
+  ],
+  "caption": "union(4,5): root(4)=4, root(5)=5 \u2192 merged"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 0.6,
+    "y": 1.6,
+    "color": "accent"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7,
+    "y": 2.3,
+    "color": "accent"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.7,
+    "y": 0.9,
+    "color": "accent"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 1.6,
+    "color": "accent"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": 4.4,
+    "y": 2.3,
+    "color": "green"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": 4.4,
+    "y": 0.9,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "accent"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "accent"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "accent"
+   },
+   {
+    "from": "1",
+    "to": "2",
+    "color": "accent"
+   }
+  ],
+  "caption": "union(1,2): root(1)=0, root(2)=2 \u2192 merged"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "0",
+    "label": "0",
+    "x": 0.6,
+    "y": 1.6,
+    "color": "accent"
+   },
+   {
+    "id": "1",
+    "label": "1",
+    "x": 1.7,
+    "y": 2.3,
+    "color": "accent"
+   },
+   {
+    "id": "2",
+    "label": "2",
+    "x": 1.7,
+    "y": 0.9,
+    "color": "accent"
+   },
+   {
+    "id": "3",
+    "label": "3",
+    "x": 3.4,
+    "y": 1.6,
+    "color": "accent"
+   },
+   {
+    "id": "4",
+    "label": "4",
+    "x": 4.4,
+    "y": 2.3,
+    "color": "green"
+   },
+   {
+    "id": "5",
+    "label": "5",
+    "x": 4.4,
+    "y": 0.9,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "0",
+    "to": "1",
+    "color": "accent"
+   },
+   {
+    "from": "2",
+    "to": "3",
+    "color": "accent"
+   },
+   {
+    "from": "4",
+    "to": "5",
+    "color": "accent"
+   },
+   {
+    "from": "1",
+    "to": "2",
+    "color": "accent"
+   }
+  ],
+  "caption": "Final components: {0,1,2,3} and {4,5}"
+ }
+]

@@ -1,0 +1,229 @@
+[
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]"
+  ],
+  "arrows": [],
+  "caption": "children (greed factors, sorted): [1, 2, 3]; cookies (sizes, sorted): [1, 1, 2, 3]"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [
+   {
+    "index": 0,
+    "label": "child",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]",
+   "trying cookie idx 0 (size 1)"
+  ],
+  "arrows": [],
+  "caption": "child needs \u22651; try smallest remaining cookie (size 1)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 0,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]",
+   "satisfied so far: 1"
+  ],
+  "arrows": [],
+  "caption": "cookie size 1 \u2265 1 \u2192 satisfy this child, move to next child AND next cookie"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [
+   {
+    "index": 1,
+    "label": "child",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]",
+   "trying cookie idx 1 (size 1)"
+  ],
+  "arrows": [],
+  "caption": "child needs \u22652; try smallest remaining cookie (size 1)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]"
+  ],
+  "arrows": [],
+  "caption": "cookie size 1 < 2 \u2192 too small, try the next larger cookie"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [
+   {
+    "index": 1,
+    "label": "child",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]",
+   "trying cookie idx 2 (size 2)"
+  ],
+  "arrows": [],
+  "caption": "child needs \u22652; try smallest remaining cookie (size 2)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 1,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]",
+   "satisfied so far: 2"
+  ],
+  "arrows": [],
+  "caption": "cookie size 2 \u2265 2 \u2192 satisfy this child, move to next child AND next cookie"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [
+   {
+    "index": 2,
+    "label": "child",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]",
+   "trying cookie idx 3 (size 3)"
+  ],
+  "arrows": [],
+  "caption": "child needs \u22653; try smallest remaining cookie (size 3)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 2,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "cookies: [1, 1, 2, 3]",
+   "satisfied so far: 3"
+  ],
+  "arrows": [],
+  "caption": "cookie size 3 \u2265 3 \u2192 satisfy this child, move to next child AND next cookie"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 0,
+    "color": "green"
+   },
+   {
+    "index": 1,
+    "color": "green"
+   },
+   {
+    "index": 2,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "Done \u2014 3 of 3 children satisfied (greedy: always try the smallest cookie that still fits)"
+ }
+]

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · DSA Patterns{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+
+<div class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-value">{{ data.total_solved }}/{{ data.total_problems }}</div>
+        <div class="stat-label">Problems solved</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ data.percent_solved }}%</div>
+        <div class="stat-label">Overall progress</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ data.current_streak_days }}</div>
+        <div class="stat-label">Day streak</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ data.due_for_review }}</div>
+        <div class="stat-label">Due for review</div>
+    </div>
+</div>
+
+<h2>By difficulty</h2>
+<div class="stat-grid">
+    {% for diff, stats in data.by_difficulty.items() %}
+    <div class="stat-card">
+        <div class="stat-value">{{ stats.solved }}/{{ stats.total }}</div>
+        <div class="stat-label">{{ diff }}</div>
+    </div>
+    {% endfor %}
+</div>
+
+<h2>By pattern</h2>
+<table class="problems-table">
+    <thead>
+        <tr>
+            <th>Pattern</th>
+            <th>Solved</th>
+            <th>Attempted</th>
+            <th>Not started</th>
+            <th>Progress</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in data.by_pattern %}
+        <tr>
+            <td><a href="/patterns/{{ p.slug }}">{{ p.name }}</a></td>
+            <td>{{ p.solved }}</td>
+            <td>{{ p.attempted }}</td>
+            <td>{{ p.not_started }}</td>
+            <td>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: {{ p.percent_solved }}%"></div>
+                </div>
+                <span class="progress-label">{{ p.percent_solved }}%</span>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,1168 @@
+[
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   }
+  ],
+  "edges": [],
+  "caption": "Empty trie \u2014 just the root."
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'cat': create new node for 'c' (path \"c\")"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'cat': create new node for 'a' (path \"ca\")"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'cat': create new node for 't' (path \"cat\")"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   }
+  ],
+  "caption": "mark end-of-word at \"cat\" for 'cat'"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "orange"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'car': path \"c\" already exists \u2014 reuse it"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "orange"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'car': path \"ca\" already exists \u2014 reuse it"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'car': create new node for 'r' (path \"car\")"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   }
+  ],
+  "caption": "mark end-of-word at \"car\" for 'car'"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "d",
+    "label": "d",
+    "x": 3.05,
+    "y": 2.1,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   },
+   {
+    "from": "root",
+    "to": "d",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'dog': create new node for 'd' (path \"d\")"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "d",
+    "label": "d",
+    "x": 3.05,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "do",
+    "label": "o",
+    "x": 3.05,
+    "y": 1.0,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   },
+   {
+    "from": "root",
+    "to": "d",
+    "color": "border"
+   },
+   {
+    "from": "d",
+    "to": "do",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'dog': create new node for 'o' (path \"do\")"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "d",
+    "label": "d",
+    "x": 3.05,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "do",
+    "label": "o",
+    "x": 3.05,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "dog",
+    "label": "g",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   },
+   {
+    "from": "root",
+    "to": "d",
+    "color": "border"
+   },
+   {
+    "from": "d",
+    "to": "do",
+    "color": "border"
+   },
+   {
+    "from": "do",
+    "to": "dog",
+    "color": "border"
+   }
+  ],
+  "caption": "insert 'dog': create new node for 'g' (path \"dog\")"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "d",
+    "label": "d",
+    "x": 3.05,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "do",
+    "label": "o",
+    "x": 3.05,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "dog",
+    "label": "g",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   },
+   {
+    "from": "root",
+    "to": "d",
+    "color": "border"
+   },
+   {
+    "from": "d",
+    "to": "do",
+    "color": "border"
+   },
+   {
+    "from": "do",
+    "to": "dog",
+    "color": "border"
+   }
+  ],
+  "caption": "mark end-of-word at \"dog\" for 'dog'"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "accent"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "d",
+    "label": "d",
+    "x": 3.05,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "do",
+    "label": "o",
+    "x": 3.05,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "dog",
+    "label": "g",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   },
+   {
+    "from": "root",
+    "to": "d",
+    "color": "border"
+   },
+   {
+    "from": "d",
+    "to": "do",
+    "color": "border"
+   },
+   {
+    "from": "do",
+    "to": "dog",
+    "color": "border"
+   }
+  ],
+  "caption": "search 'car': follow 'c' \u2192 \"c\""
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "accent"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "d",
+    "label": "d",
+    "x": 3.05,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "do",
+    "label": "o",
+    "x": 3.05,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "dog",
+    "label": "g",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   },
+   {
+    "from": "root",
+    "to": "d",
+    "color": "border"
+   },
+   {
+    "from": "d",
+    "to": "do",
+    "color": "border"
+   },
+   {
+    "from": "do",
+    "to": "dog",
+    "color": "border"
+   }
+  ],
+  "caption": "search 'car': follow 'a' \u2192 \"ca\""
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "accent"
+   },
+   {
+    "id": "d",
+    "label": "d",
+    "x": 3.05,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "do",
+    "label": "o",
+    "x": 3.05,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "dog",
+    "label": "g",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   },
+   {
+    "from": "root",
+    "to": "d",
+    "color": "border"
+   },
+   {
+    "from": "d",
+    "to": "do",
+    "color": "border"
+   },
+   {
+    "from": "do",
+    "to": "dog",
+    "color": "border"
+   }
+  ],
+  "caption": "search 'car': follow 'r' \u2192 \"car\""
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "root",
+    "label": "root",
+    "x": 2.4,
+    "y": 3.2,
+    "color": "surface"
+   },
+   {
+    "id": "c",
+    "label": "c",
+    "x": 2.4,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "ca",
+    "label": "a",
+    "x": 2.4,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "cat",
+    "label": "t",
+    "x": 2.4,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "car",
+    "label": "r",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   },
+   {
+    "id": "d",
+    "label": "d",
+    "x": 3.05,
+    "y": 2.1,
+    "color": "surface"
+   },
+   {
+    "id": "do",
+    "label": "o",
+    "x": 3.05,
+    "y": 1.0,
+    "color": "surface"
+   },
+   {
+    "id": "dog",
+    "label": "g",
+    "x": 3.05,
+    "y": -0.10000000000000009,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "root",
+    "to": "c",
+    "color": "border"
+   },
+   {
+    "from": "c",
+    "to": "ca",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "cat",
+    "color": "border"
+   },
+   {
+    "from": "ca",
+    "to": "car",
+    "color": "border"
+   },
+   {
+    "from": "root",
+    "to": "d",
+    "color": "border"
+   },
+   {
+    "from": "d",
+    "to": "do",
+    "color": "border"
+   },
+   {
+    "from": "do",
+    "to": "dog",
+    "color": "border"
+   }
+  ],
+  "caption": "search 'car': reached an end-of-word node \u2192 FOUND"
+ }
+]

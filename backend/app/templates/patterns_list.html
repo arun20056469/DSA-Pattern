@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Patterns · DSA Patterns{% endblock %}
+{% block content %}
+<h1>Patterns</h1>
+<p class="subtitle">Learn DSA the pattern-first way — master the shape, then apply it across problems.</p>
+
+<div class="pattern-grid">
+    {% for pattern in patterns %}
+    {% set stats = stats_by_slug.get(pattern.slug) %}
+    <a class="pattern-card" href="/patterns/{{ pattern.slug }}">
+        <div class="pattern-card-thumb">
+            <img src="/static/img/patterns/{{ pattern.slug }}.svg" alt="" loading="lazy">
+        </div>
+        <div class="pattern-card-header">
+            <h2>{{ pattern.name }}</h2>
+            {% if stats and stats.total > 0 %}
+                <span class="badge">{{ stats.solved }}/{{ stats.total }}</span>
+            {% else %}
+                <span class="badge badge-muted">no problems yet</span>
+            {% endif %}
+        </div>
+        <p>{{ pattern.short_description }}</p>
+        {% if stats and stats.total > 0 %}
+        <div class="progress-bar">
+            <div class="progress-bar-fill" style="width: {{ stats.percent_solved }}%"></div>
+        </div>
+        <div class="progress-label">{{ stats.percent_solved }}% solved</div>
+        {% endif %}
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

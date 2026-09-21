@@ -1,0 +1,692 @@
+[
+ {
+  "type": "grid",
+  "cells": [
+   [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   [
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+   ],
+   [
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    ""
+   ]
+  ],
+  "highlights": [
+   {
+    "r": 0,
+    "c": 0,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 1,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 2,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 3,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 4,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 5,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 6,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 7,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 8,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 9,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 0,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 1,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 2,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 3,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 4,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 5,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 6,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 7,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 8,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 9,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 0,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 1,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 2,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 3,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 4,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 5,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 6,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 7,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 8,
+    "color": "green"
+   }
+  ],
+  "faded": [],
+  "caption": "Start: assume every number 2..30 is prime"
+ },
+ {
+  "type": "grid",
+  "cells": [
+   [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   [
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+   ],
+   [
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    ""
+   ]
+  ],
+  "highlights": [
+   {
+    "r": 0,
+    "c": 0,
+    "color": "accent"
+   }
+  ],
+  "faded": [],
+  "caption": "2 is still unmarked \u2192 it's prime. Cross out all multiples of 2 starting from 4"
+ },
+ {
+  "type": "grid",
+  "cells": [
+   [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   [
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+   ],
+   [
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    ""
+   ]
+  ],
+  "highlights": [
+   {
+    "r": 0,
+    "c": 1,
+    "color": "accent"
+   },
+   {
+    "r": 0,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 8,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 0,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 8,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 0,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 8,
+    "color": "muted"
+   }
+  ],
+  "faded": [],
+  "caption": "3 is still unmarked \u2192 it's prime. Cross out all multiples of 3 starting from 9"
+ },
+ {
+  "type": "grid",
+  "cells": [
+   [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   [
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+   ],
+   [
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    ""
+   ]
+  ],
+  "highlights": [
+   {
+    "r": 0,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 3,
+    "color": "accent"
+   },
+   {
+    "r": 0,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 7,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 8,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 0,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 3,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 8,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 9,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 0,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 5,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 8,
+    "color": "muted"
+   }
+  ],
+  "faded": [],
+  "caption": "5 is still unmarked \u2192 it's prime. Cross out all multiples of 5 starting from 25"
+ },
+ {
+  "type": "grid",
+  "cells": [
+   [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ],
+   [
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+   ],
+   [
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    ""
+   ]
+  ],
+  "highlights": [
+   {
+    "r": 0,
+    "c": 0,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 1,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 3,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 5,
+    "color": "green"
+   },
+   {
+    "r": 0,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 7,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 8,
+    "color": "muted"
+   },
+   {
+    "r": 0,
+    "c": 9,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 0,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 1,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 3,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 5,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 7,
+    "color": "green"
+   },
+   {
+    "r": 1,
+    "c": 8,
+    "color": "muted"
+   },
+   {
+    "r": 1,
+    "c": 9,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 0,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 1,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 2,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 3,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 4,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 5,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 6,
+    "color": "muted"
+   },
+   {
+    "r": 2,
+    "c": 7,
+    "color": "green"
+   },
+   {
+    "r": 2,
+    "c": 8,
+    "color": "muted"
+   }
+  ],
+  "faded": [],
+  "caption": "Done \u2014 remaining unmarked numbers are prime: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]"
+ }
+]

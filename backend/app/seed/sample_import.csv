@@ -1,0 +1,4 @@
+pattern_slug,pattern_name,name,slug,difficulty,leetcode_url,hint,order
+merge-intervals,Merge Intervals,Insert Interval,insert-interval,Medium,https://leetcode.com/problems/insert-interval/,Walk sorted intervals; append non-overlapping ones and merge overlapping ones with the new interval.,1
+merge-intervals,Merge Intervals,Non-overlapping Intervals,non-overlapping-intervals,Medium,https://leetcode.com/problems/non-overlapping-intervals/,Sort by end time; greedily keep the interval that ends earliest.,2
+merge-intervals,Merge Intervals,Meeting Rooms II,meeting-rooms-ii,Medium,https://leetcode.com/problems/meeting-rooms-ii/,Sort starts and ends separately (or use a min-heap of end times) to count overlapping rooms needed.,3

@@ -1,0 +1,235 @@
+[
+ {
+  "type": "array",
+  "values": [
+   "1"
+  ],
+  "pointers": [
+   {
+    "index": 0,
+    "label": "dp[0]",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "base case: dp[0] = 1 (one way to stand still)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "1"
+  ],
+  "pointers": [
+   {
+    "index": 1,
+    "label": "dp[1]",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "base case: dp[1] = 1 (one way to climb 1 step)"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "1",
+   "2"
+  ],
+  "pointers": [
+   {
+    "index": 2,
+    "label": "dp[2]",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [
+   {
+    "fromIndex": 1,
+    "toIndex": 2,
+    "color": "green"
+   },
+   {
+    "fromIndex": 0,
+    "toIndex": 2,
+    "color": "orange"
+   }
+  ],
+  "caption": "dp[2] = dp[1] + dp[0] = 1 + 1 = 2"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "1",
+   "2",
+   "3"
+  ],
+  "pointers": [
+   {
+    "index": 3,
+    "label": "dp[3]",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [
+   {
+    "fromIndex": 2,
+    "toIndex": 3,
+    "color": "green"
+   },
+   {
+    "fromIndex": 1,
+    "toIndex": 3,
+    "color": "orange"
+   }
+  ],
+  "caption": "dp[3] = dp[2] + dp[1] = 2 + 1 = 3"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "1",
+   "2",
+   "3",
+   "5"
+  ],
+  "pointers": [
+   {
+    "index": 4,
+    "label": "dp[4]",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [
+   {
+    "fromIndex": 3,
+    "toIndex": 4,
+    "color": "green"
+   },
+   {
+    "fromIndex": 2,
+    "toIndex": 4,
+    "color": "orange"
+   }
+  ],
+  "caption": "dp[4] = dp[3] + dp[2] = 3 + 2 = 5"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "1",
+   "2",
+   "3",
+   "5",
+   "8"
+  ],
+  "pointers": [
+   {
+    "index": 5,
+    "label": "dp[5]",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [
+   {
+    "fromIndex": 4,
+    "toIndex": 5,
+    "color": "green"
+   },
+   {
+    "fromIndex": 3,
+    "toIndex": 5,
+    "color": "orange"
+   }
+  ],
+  "caption": "dp[5] = dp[4] + dp[3] = 5 + 3 = 8"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "1",
+   "2",
+   "3",
+   "5",
+   "8",
+   "13"
+  ],
+  "pointers": [
+   {
+    "index": 6,
+    "label": "dp[6]",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [
+   {
+    "fromIndex": 5,
+    "toIndex": 6,
+    "color": "green"
+   },
+   {
+    "fromIndex": 4,
+    "toIndex": 6,
+    "color": "orange"
+   }
+  ],
+  "caption": "dp[6] = dp[5] + dp[4] = 8 + 5 = 13"
+ },
+ {
+  "type": "array",
+  "values": [
+   "1",
+   "1",
+   "2",
+   "3",
+   "5",
+   "8",
+   "13"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 6,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "Done \u2014 dp[6] = 13 ways to climb 6 stairs"
+ }
+]

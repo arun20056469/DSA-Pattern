@@ -1,0 +1,1029 @@
+[
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "B",
+    "label": "B:\u221e",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C:\u221e",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D:\u221e",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "All distances start at \u221e except A=0. Priority queue: [(0,A)]"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "accent"
+   },
+   {
+    "id": "B",
+    "label": "B:\u221e",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C:\u221e",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D:\u221e",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "pop cheapest unvisited: A (dist=0) \u2014 finalize it"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "accent"
+   },
+   {
+    "id": "B",
+    "label": "B:4",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C:\u221e",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D:\u221e",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "relax edge A\u2192B (weight 4): \u221e \u2192 4"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "accent"
+   },
+   {
+    "id": "B",
+    "label": "B:4",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "surface"
+   },
+   {
+    "id": "D",
+    "label": "D:\u221e",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "relax edge A\u2192C (weight 1): \u221e \u2192 1"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:4",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "accent"
+   },
+   {
+    "id": "D",
+    "label": "D:\u221e",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "pop cheapest unvisited: C (dist=1) \u2014 finalize it"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:2",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "accent"
+   },
+   {
+    "id": "D",
+    "label": "D:\u221e",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "relax edge C\u2192B (weight 1): 4 \u2192 2"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:2",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "surface"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "accent"
+   },
+   {
+    "id": "D",
+    "label": "D:7",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "relax edge C\u2192D (weight 6): \u221e \u2192 7"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:2",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "accent"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D:7",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "pop cheapest unvisited: B (dist=2) \u2014 finalize it"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:2",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "accent"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D:4",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "surface"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "relax edge B\u2192D (weight 2): 7 \u2192 4"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:2",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D:4",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "accent"
+   },
+   {
+    "id": "E",
+    "label": "E:\u221e",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "pop cheapest unvisited: D (dist=4) \u2014 finalize it"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:2",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D:4",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "accent"
+   },
+   {
+    "id": "E",
+    "label": "E:7",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "surface"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "relax edge D\u2192E (weight 3): \u221e \u2192 7"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:2",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D:4",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "E",
+    "label": "E:7",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "accent"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "pop cheapest unvisited: E (dist=7) \u2014 finalize it"
+ },
+ {
+  "type": "graph",
+  "nodes": [
+   {
+    "id": "A",
+    "label": "A:0",
+    "x": 0.5,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "B",
+    "label": "B:2",
+    "x": 2.2,
+    "y": 2.6,
+    "color": "green"
+   },
+   {
+    "id": "C",
+    "label": "C:1",
+    "x": 2.2,
+    "y": 0.4,
+    "color": "green"
+   },
+   {
+    "id": "D",
+    "label": "D:4",
+    "x": 4.0,
+    "y": 1.5,
+    "color": "green"
+   },
+   {
+    "id": "E",
+    "label": "E:7",
+    "x": 5.7,
+    "y": 1.5,
+    "color": "green"
+   }
+  ],
+  "edges": [
+   {
+    "from": "A",
+    "to": "B",
+    "color": "border",
+    "label": "4"
+   },
+   {
+    "from": "A",
+    "to": "C",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "B",
+    "color": "border",
+    "label": "1"
+   },
+   {
+    "from": "C",
+    "to": "D",
+    "color": "border",
+    "label": "6"
+   },
+   {
+    "from": "B",
+    "to": "D",
+    "color": "border",
+    "label": "2"
+   },
+   {
+    "from": "D",
+    "to": "E",
+    "color": "border",
+    "label": "3"
+   }
+  ],
+  "caption": "Done \u2014 shortest distances from A: A=0, B=2, C=1, D=4, E=7"
+ }
+]

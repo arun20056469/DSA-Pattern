@@ -1,0 +1,59 @@
+[
+ {
+  "type": "array",
+  "values": [
+   "2",
+   "7",
+   "11",
+   "15"
+  ],
+  "pointers": [
+   {
+    "index": 0,
+    "label": "i",
+    "color": "accent"
+   }
+  ],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "(empty)"
+  ],
+  "arrows": [],
+  "caption": "nums[0]=2, complement=7 not in seen \u2192 store 2\u2192idx0"
+ },
+ {
+  "type": "array",
+  "values": [
+   "2",
+   "7",
+   "11",
+   "15"
+  ],
+  "pointers": [
+   {
+    "index": 1,
+    "label": "i",
+    "color": "accent"
+   }
+  ],
+  "highlights": [
+   {
+    "index": 0,
+    "color": "green"
+   },
+   {
+    "index": 1,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": [
+   "2\u2192idx0"
+  ],
+  "arrows": [],
+  "caption": "nums[1]=7, complement=2 IS in seen (at index 0) \u2192 found pair!"
+ }
+]

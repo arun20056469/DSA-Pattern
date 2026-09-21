@@ -1,0 +1,142 @@
+[
+ {
+  "type": "array",
+  "values": [
+   "2",
+   "4",
+   "7",
+   "9",
+   "12",
+   "15",
+   "19",
+   "23"
+  ],
+  "pointers": [
+   {
+    "index": 0,
+    "label": "lo",
+    "color": "green"
+   },
+   {
+    "index": 3,
+    "label": "mid",
+    "color": "accent"
+   },
+   {
+    "index": 7,
+    "label": "hi",
+    "color": "orange"
+   }
+  ],
+  "highlights": [
+   {
+    "index": 3,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "lo=0, hi=7, mid=3 \u2192 arr[mid]=9, target=15"
+ },
+ {
+  "type": "array",
+  "values": [
+   "2",
+   "4",
+   "7",
+   "9",
+   "12",
+   "15",
+   "19",
+   "23"
+  ],
+  "pointers": [],
+  "highlights": [],
+  "window": null,
+  "faded": [],
+  "secondary": null,
+  "arrows": [],
+  "caption": "9 < 15 \u2192 discard left half, search lo = 4..hi"
+ },
+ {
+  "type": "array",
+  "values": [
+   "2",
+   "4",
+   "7",
+   "9",
+   "12",
+   "15",
+   "19",
+   "23"
+  ],
+  "pointers": [
+   {
+    "index": 4,
+    "label": "lo",
+    "color": "green"
+   },
+   {
+    "index": 5,
+    "label": "mid",
+    "color": "accent"
+   },
+   {
+    "index": 7,
+    "label": "hi",
+    "color": "orange"
+   }
+  ],
+  "highlights": [
+   {
+    "index": 5,
+    "color": "accent"
+   }
+  ],
+  "window": null,
+  "faded": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "secondary": null,
+  "arrows": [],
+  "caption": "lo=4, hi=7, mid=5 \u2192 arr[mid]=15, target=15"
+ },
+ {
+  "type": "array",
+  "values": [
+   "2",
+   "4",
+   "7",
+   "9",
+   "12",
+   "15",
+   "19",
+   "23"
+  ],
+  "pointers": [],
+  "highlights": [
+   {
+    "index": 5,
+    "color": "green"
+   }
+  ],
+  "window": null,
+  "faded": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   6,
+   7
+  ],
+  "secondary": null,
+  "arrows": [],
+  "caption": "arr[5] == target \u2192 found at index 5!"
+ }
+]
