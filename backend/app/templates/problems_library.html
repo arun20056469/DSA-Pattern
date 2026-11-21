@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block title %}Problem Library · DSA Patterns{% endblock %}
+{% block crumb %}Problem Library{% endblock %}
+{% block content %}
+{% macro page_url(target) -%}
+/problems?page={{ target }}{% if filters.q %}&q={{ filters.q|urlencode }}{% endif %}{% if filters.stage %}&stage={{ filters.stage|urlencode }}{% endif %}{% if filters.pattern %}&pattern={{ filters.pattern|urlencode }}{% endif %}{% if filters.difficulty %}&difficulty={{ filters.difficulty|urlencode }}{% endif %}{% if filters.status %}&status={{ filters.status|urlencode }}{% endif %}{% if filters.tag %}&tag={{ filters.tag|urlencode }}{% endif %}{% if filters.sort %}&sort={{ filters.sort|urlencode }}{% endif %}
+{%- endmacro %}
+
+<header class="page-head">
+    <h1>Problem Library</h1>
+    <p class="page-sub">Search and filter all {{ total }} problems across the curriculum.</p>
+</header>
+
+<section class="card" aria-label="Problem filters">
+    <form class="filter-bar" method="get">
+        <label>Search
+            <input type="search" name="q" value="{{ filters.q }}" placeholder="e.g. Two Sum">
+        </label>
+        <label>Stage
+            <select name="stage">
+                <option value="">All stages</option>
+                {% for stage in ['Basic', 'Intermediate', 'Advanced'] %}
+                <option value="{{ stage }}" {% if filters.stage == stage %}selected{% endif %}>{{ stage }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label>Pattern
+            <select name="pattern">
+                <option value="">All patterns</option>
+                {% for p in patterns %}
+                <option value="{{ p.slug }}" {% if filters.pattern == p.slug %}selected{% endif %}>{{ p.name }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label>Difficulty
+            <select name="difficulty">
+                <option value="">All difficulties</option>
+                {% for diff in ['Easy', 'Medium', 'Hard'] %}
+                <option value="{{ diff }}" {% if filters.difficulty == diff %}selected{% endif %}>{{ diff }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label>Status
+            <select name="status">
+                <option value="">All statuses</option>
+                <option value="not_started" {% if filters.status == 'not_started' %}selected{% endif %}>Not started</option>
+                <option value="attempted" {% if filters.status == 'attempted' %}selected{% endif %}>Attempted</option>
+                <option value="solved" {% if filters.status == 'solved' %}selected{% endif %}>Solved</option>
+            </select>
+        </label>
+        <label>Tag
+            <input type="text" name="tag" value="{{ filters.tag }}" placeholder="e.g. array">
+        </label>
+        <label>Sort
+            <select name="sort">
+                <option value="order" {% if filters.sort == 'order' %}selected{% endif %}>Curriculum order</option>
+                <option value="difficulty" {% if filters.sort == 'difficulty' %}selected{% endif %}>Difficulty</option>
+                <option value="name" {% if filters.sort == 'name' %}selected{% endif %}>Name</option>
+            </select>
+        </label>
+        <button type="submit">Apply</button>
+    </form>
+
+    {% if items %}
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Problem</th>
+                <th>Pattern</th>
+                <th>Stage</th>
+                <th>Difficulty</th>
+                <th>Status</th>
+                <th>LeetCode</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for problem in items %}
+            {% set current_status = problem.progress.status.value if problem.progress else 'not_started' %}
+            <tr class="problem-row" data-problem-id="{{ problem.id }}" data-status="{{ current_status }}">
+                <td class="num">{{ (page - 1) * 25 + loop.index }}</td>
+                <td>
+                    <a href="/patterns/{{ problem.pattern.slug }}#problem-{{ problem.id }}">{{ problem.name }}</a>
+                </td>
+                <td><a href="/patterns/{{ problem.pattern.slug }}">{{ problem.pattern.name }}</a></td>
+                <td><span class="stage-badge stage-{{ problem.pattern.stage.value|lower }}">{{ problem.pattern.stage.value }}</span></td>
+                <td><span class="difficulty diff-{{ problem.difficulty.value|lower }}"><span class="difficulty-dot"></span>{{ problem.difficulty.value }}</span></td>
+                <td>
+                    <div class="status-control" role="group" aria-label="Status for {{ problem.name }}">
+                        <button type="button" data-status="not_started" aria-pressed="{{ 'true' if current_status == 'not_started' else 'false' }}">Not started</button>
+                        <button type="button" data-status="attempted" aria-pressed="{{ 'true' if current_status == 'attempted' else 'false' }}">Attempted</button>
+                        <button type="button" data-status="solved" aria-pressed="{{ 'true' if current_status == 'solved' else 'false' }}">Solved</button>
+                    </div>
+                    <span class="row-error" role="alert" hidden></span>
+                </td>
+                <td><a href="{{ problem.leetcode_url }}" target="_blank" rel="noopener noreferrer">Open ↗</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="empty-state card-body">
+        <p>No problems match these filters. <a href="/problems">Clear all filters</a>.</p>
+    </div>
+    {% endif %}
+
+    <div class="pagination">
+        <span>Page {{ page }} of {{ pages }} · {{ total }} results</span>
+        <span class="pagination-links">
+            {% if page > 1 %}<a href="{{ page_url(page - 1) }}">← Previous</a>{% endif %}
+            {% for n in range(1, pages + 1) %}
+                {% if n == page %}<span class="current">{{ n }}</span>
+                {% elif n <= 2 or n > pages - 2 or (n - page)|abs <= 1 %}<a href="{{ page_url(n) }}">{{ n }}</a>
+                {% elif n == 3 and page > 4 %}<span>…</span>
+                {% elif n == pages - 2 and page < pages - 3 %}<span>…</span>{% endif %}
+            {% endfor %}
+            {% if page < pages %}<a href="{{ page_url(page + 1) }}">Next →</a>{% endif %}
+        </span>
+    </div>
+</section>
+{% endblock %}

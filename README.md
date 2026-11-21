@@ -41,7 +41,7 @@ DSA/
         api_progress.py     # PUT .../progress, POST .../review
         api_dashboard.py    # GET /api/dashboard
       seed/
-        patterns_seed.json  # all 15 patterns; 5 fully populated with 10 problems each
+        patterns_seed.json  # 21 staged patterns × 20 LeetCode problems = 420
         sample_import.csv   # example file for the CSV importer
       templates/            # Jinja2 HTML templates
       static/                # CSS + vanilla JS
@@ -62,10 +62,11 @@ DSA/
 
 ## Patterns seeded
 
-**21 patterns, 210 problems total** — every pattern is fully populated with 10 real
-LeetCode problems each, ordered easy → medium → hard, each with a direct URL and a
-one-line hint. The pattern order on `/patterns` is deliberately a low-level →
-advanced learning path, not alphabetical:
+**21 patterns, 420 problems total** — every pattern is fully populated with 20 real
+LeetCode problems each (180 Easy / 200 Medium / 40 Hard), ordered easy → medium →
+hard, each with a direct URL, tags, and a one-line hint. Patterns are grouped into
+**Basic / Intermediate / Advanced** stages (7 patterns each). The order on
+`/patterns` is deliberately a low-level → advanced learning path, not alphabetical:
 
 | # | Pattern | # | Pattern |
 |---|---------|---|---------|
@@ -105,11 +106,33 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Open **http://127.0.0.1:8000/patterns**. The SQLite DB (`data/dsa.db`) and all
-15 patterns / 50 problems are created automatically on first startup — no manual
-migration step. The seed loader is idempotent and re-runs on every startup, so
-editing `patterns_seed.json` and restarting the server picks up the changes
-without ever touching your saved progress/notes.
+Open **http://127.0.0.1:8000/dashboard**. The SQLite DB (`data/dsa.db`), all
+21 patterns / 420 problems, and any pending Alembic migrations are applied
+automatically on first startup — no manual migration step. The seed loader is
+idempotent and re-runs on every startup, so editing `patterns_seed.json` and
+restarting the server picks up the changes without ever touching your saved
+progress/notes.
+
+### Portal pages
+
+- `/dashboard` — KPIs, stage progress, activity history, curriculum matrix, review queue
+- `/patterns` — curriculum cards grouped by Basic → Intermediate → Advanced
+- `/patterns/{slug}` — pattern walkthrough, template, and 20-problem practice table
+- `/problems` — global problem library with stage/pattern/difficulty/status/tag filters and pagination
+- `/review` — spaced-repetition review queue with one-click “Reviewed”
+
+### Maintenance scripts
+
+```bash
+# Rebuild the seed from the live LeetCode catalog (resumable, paginated)
+python scripts/build_seed.py
+
+# Validate seed links, uniqueness, stages, and difficulty mix
+python scripts/validate_seed.py
+
+# Smoke-check the running app on 127.0.0.1:8765
+python scripts/smoke_check.py
+```
 
 API docs (Swagger UI): **http://127.0.0.1:8000/docs**
 

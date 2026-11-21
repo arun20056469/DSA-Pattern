@@ -21,6 +21,12 @@ class Difficulty(str, enum.Enum):
     HARD = "Hard"
 
 
+class Stage(str, enum.Enum):
+    BASIC = "Basic"
+    INTERMEDIATE = "Intermediate"
+    ADVANCED = "Advanced"
+
+
 class Status(str, enum.Enum):
     NOT_STARTED = "not_started"
     ATTEMPTED = "attempted"
@@ -33,6 +39,7 @@ class Pattern(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     slug: Mapped[str] = mapped_column(String(100), unique=True, index=True)
     name: Mapped[str] = mapped_column(String(200))
+    stage: Mapped[Stage] = mapped_column(Enum(Stage), default=Stage.BASIC, index=True)
     order_index: Mapped[int] = mapped_column(Integer, default=0)
     short_description: Mapped[str] = mapped_column(Text)
     when_to_use: Mapped[str] = mapped_column(Text)
@@ -57,6 +64,9 @@ class Problem(Base):
     name: Mapped[str] = mapped_column(String(300))
     difficulty: Mapped[Difficulty] = mapped_column(Enum(Difficulty))
     leetcode_url: Mapped[str] = mapped_column(String(500))
+    leetcode_id: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    leetcode_slug: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    tags: Mapped[str | None] = mapped_column(Text, nullable=True)
     hint: Mapped[str] = mapped_column(Text)
     order_index: Mapped[int] = mapped_column(Integer, default=0)
 

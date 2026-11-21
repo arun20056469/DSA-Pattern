@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Review Queue · DSA Patterns{% endblock %}
+{% block crumb %}Review Queue{% endblock %}
+{% block content %}
+<header class="page-head">
+    <h1>Review Queue</h1>
+    <p class="page-sub">Spaced-repetition checkpoints for problems you have already solved.</p>
+</header>
+
+<section class="card" aria-labelledby="queue-title">
+    <div class="card-head">
+        <h2 id="queue-title">Due now <span class="count">({{ due_problems|length }})</span></h2>
+        <a class="btn btn-ghost" href="/dashboard">Back to overview</a>
+    </div>
+
+    {% if due_problems %}
+    <table class="data-table review-table">
+        <thead>
+            <tr>
+                <th>Problem</th>
+                <th>Pattern</th>
+                <th>Due</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in due_problems %}
+            <tr class="review-item" data-problem-id="{{ item.id }}">
+                <td>
+                    <a href="/patterns/{{ item.pattern_slug }}#problem-{{ item.id }}">{{ item.name }}</a>
+                </td>
+                <td><a href="/patterns/{{ item.pattern_slug }}">{{ item.pattern_name }}</a></td>
+                <td>{{ item.due_label }}</td>
+                <td>
+                    <button type="button" class="review-done" data-problem-id="{{ item.id }}">Reviewed ✓</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="empty-state card-body">
+        <p><strong>Nothing due right now.</strong> Solved problems enter this queue on days 1, 3, 7, 16, and 35.</p>
+        <a class="btn" href="/problems">Browse the problem library →</a>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

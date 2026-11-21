@@ -1,22 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0b1220">
+    <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
     <title>{% block title %}DSA Patterns{% endblock %}</title>
+    <link rel="preload" href="/static/fonts/archivo-latin-2.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/source-serif-4-latin-20.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/static/fonts/fonts.css">
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <header class="topbar">
-        <a class="brand" href="/patterns">DSA&nbsp;Patterns</a>
-        <nav>
-            <a href="/patterns">Patterns</a>
-            <a href="/dashboard">Dashboard</a>
-        </nav>
-    </header>
-    <main class="container">
-        {% block content %}{% endblock %}
-    </main>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Primary navigation">
+            <a class="brand" href="/dashboard" aria-label="DSA Patterns home">
+                <svg class="brand-mark" width="20" height="20" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+                    <rect x="1" y="1" width="7" height="7" fill="currentColor"></rect>
+                    <rect x="10" y="1" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.5"></rect>
+                    <rect x="1" y="10" width="7" height="7" fill="none" stroke="currentColor" stroke-width="1.5"></rect>
+                    <rect x="10" y="10" width="7" height="7" fill="currentColor"></rect>
+                </svg>
+                <span class="brand-text">DSA<span class="brand-accent">/</span>Patterns</span>
+            </a>
+
+            <div class="sidebar-section-label">Workspace</div>
+            <nav class="side-nav" aria-label="Main">
+                <a href="/dashboard" {% if request.url.path == '/dashboard' or request.url.path == '/' %}aria-current="page"{% endif %}>
+                    <span class="nav-icon" aria-hidden="true">◫</span><span>Overview</span>
+                </a>
+                <a href="/patterns" {% if request.url.path.startswith('/patterns') %}aria-current="page"{% endif %}>
+                    <span class="nav-icon" aria-hidden="true">▤</span><span>Curriculum</span>
+                </a>
+                <a href="/problems" {% if request.url.path == '/problems' %}aria-current="page"{% endif %}>
+                    <span class="nav-icon" aria-hidden="true">⌕</span><span>Problem Library</span>
+                </a>
+                <a href="/review" {% if request.url.path == '/review' %}aria-current="page"{% endif %}>
+                    <span class="nav-icon" aria-hidden="true">↻</span><span>Review Queue</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-section-label">Resources</div>
+            <nav class="side-nav" aria-label="Resources">
+                <a href="/docs" target="_blank" rel="noopener noreferrer">
+                    <span class="nav-icon" aria-hidden="true">⌘</span><span>API Docs</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-foot">
+                <div class="sidebar-callout">
+                    <strong>Learning path</strong>
+                    <span>Basic → Intermediate → Advanced</span>
+                </div>
+            </div>
+        </aside>
+
+        <div class="workspace">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="icon-button mobile-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                    <div class="breadcrumb" aria-label="Breadcrumb">
+                        <span>Workspace</span>
+                        <span class="breadcrumb-sep">/</span>
+                        <strong>{% block crumb %}Overview{% endblock %}</strong>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <form class="global-search" action="/problems" method="get" role="search">
+                        <label class="sr-only" for="global-search">Search problems</label>
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+                        <input id="global-search" type="search" name="q" placeholder="Search 420 problems…" autocomplete="off">
+                        <kbd>/</kbd>
+                    </form>
+                    <button class="icon-button theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">◐</button>
+                    <div class="avatar" title="Personal workspace">AS</div>
+                </div>
+            </header>
+
+            <main class="main" id="main">
+                {% block content %}{% endblock %}
+            </main>
+
+            <footer class="footer">
+                <span>DSA Patterns · pattern-first interview preparation</span>
+                <span>Progress stays in <code>data/dsa.db</code></span>
+            </footer>
+        </div>
+    </div>
+
+    <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
     <script src="/static/js/app.js"></script>
     {% block scripts %}{% endblock %}
 </body>

@@ -1,32 +1,60 @@
 {% extends "base.html" %}
-{% block title %}Patterns · DSA Patterns{% endblock %}
+{% block title %}Curriculum · DSA Patterns{% endblock %}
+{% block crumb %}Curriculum{% endblock %}
 {% block content %}
-<h1>Patterns</h1>
-<p class="subtitle">Learn DSA the pattern-first way — master the shape, then apply it across problems.</p>
+<header class="page-head">
+    <h1>Curriculum</h1>
+    <p class="page-sub">21 patterns · 420 LeetCode-backed problems · Basic → Intermediate → Advanced.</p>
+</header>
 
-<div class="pattern-grid">
-    {% for pattern in patterns %}
-    {% set stats = stats_by_slug.get(pattern.slug) %}
-    <a class="pattern-card" href="/patterns/{{ pattern.slug }}">
-        <div class="pattern-card-thumb">
-            <img src="/static/img/patterns/{{ pattern.slug }}.svg" alt="" loading="lazy">
-        </div>
-        <div class="pattern-card-header">
-            <h2>{{ pattern.name }}</h2>
-            {% if stats and stats.total > 0 %}
-                <span class="badge">{{ stats.solved }}/{{ stats.total }}</span>
-            {% else %}
-                <span class="badge badge-muted">no problems yet</span>
-            {% endif %}
-        </div>
-        <p>{{ pattern.short_description }}</p>
-        {% if stats and stats.total > 0 %}
-        <div class="progress-bar">
-            <div class="progress-bar-fill" style="width: {{ stats.percent_solved }}%"></div>
-        </div>
-        <div class="progress-label">{{ stats.percent_solved }}% solved</div>
-        {% endif %}
-    </a>
-    {% endfor %}
-</div>
+<section class="specimen" aria-labelledby="specimen-title">
+    <div class="specimen-figure">
+        <img src="/static/img/patterns/two-pointers.svg" alt="Two pointers converging on a sorted array" width="423" height="210">
+    </div>
+    <div class="specimen-copy">
+        <h2 id="specimen-title">Two Pointers</h2>
+        <p>Move two indices toward each other to shrink the search space. Start here if you are new to pattern-based preparation.</p>
+        <a class="screen-link" href="/patterns/two-pointers">Open the walkthrough →</a>
+    </div>
+</section>
+
+<nav class="stage-tabs" aria-label="Filter curriculum by stage">
+    <a href="/patterns" {% if not active_stage %}aria-current="page"{% endif %}>All stages</a>
+    <a href="/patterns?stage=Basic" {% if active_stage == 'Basic' %}aria-current="page"{% endif %}>Basic</a>
+    <a href="/patterns?stage=Intermediate" {% if active_stage == 'Intermediate' %}aria-current="page"{% endif %}>Intermediate</a>
+    <a href="/patterns?stage=Advanced" {% if active_stage == 'Advanced' %}aria-current="page"{% endif %}>Advanced</a>
+</nav>
+
+{% set stages = ['Basic', 'Intermediate', 'Advanced'] %}
+{% for stage in stages %}
+{% set items = curriculum|selectattr('stage', 'equalto', stage)|list %}
+{% if items %}
+<section class="stage-section" aria-labelledby="stage-{{ stage|lower }}">
+    <div class="stage-section-head">
+        <span class="stage-badge stage-{{ stage|lower }}">{{ stage }}</span>
+        <h2 id="stage-{{ stage|lower }}">{{ stage }} patterns</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <span class="page-sub">{{ items|length }} patterns · {{ items|sum(attribute='total') }} problems</span>
+    </div>
+    <div class="pattern-cards">
+        {% for p in items %}
+        {% set pct = (p.solved / p.total * 100) if p.total else 0 %}
+        <a class="pattern-card card" href="/patterns/{{ p.slug }}">
+            <div class="pattern-card-top">
+                <span class="pattern-index">{{ "%02d"|format(p.order_index) }}</span>
+                <span class="stage-badge stage-{{ p.stage|lower }}">{{ p.stage }}</span>
+            </div>
+            <h3>{{ p.name }}</h3>
+            <p>{{ p.short_description }}</p>
+            <div class="progress-track" aria-hidden="true"><div class="progress-fill" style="width: {{ '%.1f'|format(pct) }}%"></div></div>
+            <div class="pattern-card-foot">
+                <span>{{ p.solved }}/{{ p.total }} solved{% if p.due_count %} · {{ p.due_count }} due{% endif %}</span>
+                <span>{{ '%.0f'|format(pct) }}%</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+{% endfor %}
 {% endblock %}

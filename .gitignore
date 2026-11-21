@@ -2,4 +2,8 @@ backend/.venv/
 __pycache__/
 *.pyc
 data/dsa.db
+data/*.bak-*
+data/progress-snapshot.json
+backend/scripts/leetcode_catalog.json
+prisma-app/
 .DS_Store

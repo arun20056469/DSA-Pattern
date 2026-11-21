@@ -8,8 +8,8 @@ router = APIRouter(prefix="/api/patterns", tags=["patterns"])
 
 
 @router.get("", response_model=list[schemas.PatternOut])
-def list_patterns(db: Session = Depends(get_db)):
-    return crud.get_patterns(db)
+def list_patterns(stage: str | None = None, db: Session = Depends(get_db)):
+    return crud.get_patterns(db, stage=stage)
 
 
 @router.get("/{slug}", response_model=schemas.PatternWithProblems)

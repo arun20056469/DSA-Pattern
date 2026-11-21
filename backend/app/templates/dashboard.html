@@ -1,63 +1,128 @@
 {% extends "base.html" %}
-{% block title %}Dashboard · DSA Patterns{% endblock %}
+{% block title %}Overview · DSA Patterns{% endblock %}
+{% block crumb %}Overview{% endblock %}
 {% block content %}
-<h1>Dashboard</h1>
+<header class="page-head">
+    <h1>Overview</h1>
+    <p class="page-sub">Your pattern-first preparation, at a glance.</p>
+</header>
 
-<div class="stat-grid">
-    <div class="stat-card">
-        <div class="stat-value">{{ data.total_solved }}/{{ data.total_problems }}</div>
-        <div class="stat-label">Problems solved</div>
+<section class="kpi-grid" aria-label="Key metrics">
+    <div class="kpi card">
+        <div class="kpi-label">Problems solved</div>
+        <div class="kpi-value"><span class="num">{{ data.total_solved }}</span><span class="page-sub"> / {{ data.total_problems }}</span></div>
+        <div class="kpi-meta">{{ data.percent_solved }}% of the 420-problem library</div>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">{{ data.percent_solved }}%</div>
-        <div class="stat-label">Overall progress</div>
+    <div class="kpi card">
+        <div class="kpi-label">Attempted</div>
+        <div class="kpi-value"><span class="num">{{ data.total_attempted }}</span></div>
+        <div class="kpi-meta">Problems in progress</div>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">{{ data.current_streak_days }}</div>
-        <div class="stat-label">Day streak</div>
+    <div class="kpi card">
+        <div class="kpi-label">Study streak</div>
+        <div class="kpi-value"><span class="num">{{ data.current_streak_days }}</span><span class="page-sub"> days</span></div>
+        <div class="kpi-meta">Keep solving to extend it</div>
     </div>
-    <div class="stat-card">
-        <div class="stat-value">{{ data.due_for_review }}</div>
-        <div class="stat-label">Due for review</div>
+    <div class="kpi card">
+        <div class="kpi-label">Due for review</div>
+        <div class="kpi-value"><span class="num">{{ data.due_for_review }}</span></div>
+        <div class="kpi-meta"><a href="/review">Open review queue →</a></div>
     </div>
-</div>
+</section>
 
-<h2>By difficulty</h2>
-<div class="stat-grid">
-    {% for diff, stats in data.by_difficulty.items() %}
-    <div class="stat-card">
-        <div class="stat-value">{{ stats.solved }}/{{ stats.total }}</div>
-        <div class="stat-label">{{ diff }}</div>
-    </div>
-    {% endfor %}
-</div>
-
-<h2>By pattern</h2>
-<table class="problems-table">
-    <thead>
-        <tr>
-            <th>Pattern</th>
-            <th>Solved</th>
-            <th>Attempted</th>
-            <th>Not started</th>
-            <th>Progress</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for p in data.by_pattern %}
-        <tr>
-            <td><a href="/patterns/{{ p.slug }}">{{ p.name }}</a></td>
-            <td>{{ p.solved }}</td>
-            <td>{{ p.attempted }}</td>
-            <td>{{ p.not_started }}</td>
-            <td>
-                <div class="progress-bar">
-                    <div class="progress-bar-fill" style="width: {{ p.percent_solved }}%"></div>
+<div class="dashboard-grid">
+    <section class="curriculum" aria-labelledby="curriculum-title">
+        <h2 id="curriculum-title">Curriculum matrix</h2>
+        <div class="matrix">
+            {% for p in data.curriculum %}
+            <div class="matrix-row">
+                <a class="matrix-label" href="/patterns/{{ p.slug }}">
+                    <span class="matrix-index">{{ "%02d"|format(p.order_index) }}</span>
+                    <span class="matrix-name">{{ p.name }}</span>
+                    <span class="stage-badge stage-{{ p.stage|lower }}">{{ p.stage }}</span>
+                </a>
+                <div class="matrix-cells">
+                    {% for problem in p.problems %}
+                    <a class="cell {% if problem.status == 'solved' %}is-solved{% elif problem.status == 'attempted' %}is-attempted{% endif %} {% if problem.due %}is-due{% endif %}"
+                       href="/patterns/{{ p.slug }}#problem-{{ problem.id }}"
+                       title="{{ problem.name }} ({{ problem.difficulty }}, {{ problem.status|replace('_', ' ') }})"
+                       aria-label="{{ problem.name }}, {{ problem.difficulty }}, {{ problem.status|replace('_', ' ') }}{% if problem.due %}, due for review{% endif %}"></a>
+                    {% endfor %}
                 </div>
-                <span class="progress-label">{{ p.percent_solved }}%</span>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="matrix-legend" aria-hidden="true">
+            <span><span class="cell is-solved"></span>Solved</span>
+            <span><span class="cell is-attempted"></span>Attempted</span>
+            <span><span class="cell"></span>Not started</span>
+            <span><span class="cell is-solved is-due"></span>Due for review</span>
+        </div>
+    </section>
+
+    <aside class="dashboard-aside stack">
+        <section class="card" aria-labelledby="stage-title">
+            <div class="card-head"><h2 id="stage-title">Stage progress</h2></div>
+            <div class="card-body">
+                {% for item in data.by_stage %}
+                <div class="stage-row">
+                    <strong>{{ item.stage.value }}</strong>
+                    <span class="progress-track"><span class="progress-fill" style="width: {{ item.percent_solved }}%"></span></span>
+                    <span class="num">{{ item.solved }}/{{ item.total }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="card" aria-labelledby="activity-title">
+            <div class="card-head">
+                <h2 id="activity-title">Recent activity</h2>
+                <span class="page-sub">{{ data.activity|length }} active days</span>
+            </div>
+            <div class="card-body">
+                {% if data.activity %}
+                <div class="heatmap" aria-label="Recent solving activity">
+                    {% for day in data.activity %}
+                    {% set level = 'l3' if day.count >= 5 else ('l2' if day.count >= 3 else 'l1') %}
+                    <span class="heat-cell {{ level }}" title="{{ day.date }}: {{ day.count }} solved"></span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="empty-note">Solve a problem to start your activity history.</p>
+                {% endif %}
+            </div>
+        </section>
+
+        <section class="review-section" aria-labelledby="review-title">
+            <h2 id="review-title">Due for review <span class="count">({{ data.due_for_review }})</span></h2>
+            {% if data.due_problems %}
+            <ul class="review-queue">
+                {% for p in data.due_problems %}
+                <li class="review-item">
+                    <a class="review-link" href="/patterns/{{ p.pattern_slug }}#problem-{{ p.id }}">
+                        <span class="review-name">{{ p.name }}</span>
+                        <span class="review-pattern">{{ p.pattern_name }}</span>
+                    </a>
+                    <span class="review-when">{{ p.due_label }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="empty-note">Nothing due today. The next review appears here when it comes up.</p>
+            {% endif %}
+        </section>
+
+        <section class="difficulty-section" aria-labelledby="difficulty-title">
+            <h2 id="difficulty-title">By difficulty</h2>
+            {% for diff, stats in data.by_difficulty.items() %}
+            {% set pct = (stats.solved / stats.total * 100) if stats.total else 0 %}
+            <div class="bar-row">
+                <span class="bar-label">{{ diff }}</span>
+                <span class="bar-track"><span class="bar-fill diff-{{ diff|lower }}" style="width: {{ '%.1f'|format(pct) }}%"></span></span>
+                <span class="bar-count num">{{ stats.solved }}/{{ stats.total }}</span>
+            </div>
+            {% endfor %}
+        </section>
+    </aside>
+</div>
 {% endblock %}

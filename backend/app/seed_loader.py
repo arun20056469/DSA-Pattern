@@ -2,9 +2,16 @@ import json
 from pathlib import Path
 
 from app.database import Base, SessionLocal, engine
-from app.models import Difficulty, Pattern, Problem
+from app.models import Difficulty, Pattern, Problem, Stage
 
 SEED_FILE = Path(__file__).resolve().parent / "seed" / "patterns_seed.json"
+
+
+def _slug_from_url(url: str) -> str | None:
+    marker = "/problems/"
+    if marker not in url:
+        return None
+    return url.split(marker, 1)[1].strip("/").split("?", 1)[0] or None
 
 
 def load_seed(seed_path: Path = SEED_FILE) -> None:
@@ -27,6 +34,7 @@ def load_seed(seed_path: Path = SEED_FILE) -> None:
                 db.add(pattern)
 
             pattern.name = pattern_data["name"]
+            pattern.stage = Stage(pattern_data.get("stage", "Basic"))
             pattern.order_index = pattern_data["order"]
             pattern.short_description = pattern_data["short_description"]
             pattern.when_to_use = pattern_data["when_to_use"]
@@ -48,6 +56,11 @@ def load_seed(seed_path: Path = SEED_FILE) -> None:
                 problem.name = problem_data["name"]
                 problem.difficulty = Difficulty(problem_data["difficulty"])
                 problem.leetcode_url = problem_data["leetcode_url"]
+                problem.leetcode_id = problem_data.get("leetcode_id")
+                problem.leetcode_slug = problem_data.get("leetcode_slug") or _slug_from_url(
+                    problem_data["leetcode_url"]
+                )
+                problem.tags = ",".join(problem_data.get("tags", [])) or None
                 problem.hint = problem_data["hint"]
                 problem.order_index = problem_data["order"]
 

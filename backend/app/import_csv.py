@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 from app.database import Base, SessionLocal, engine
-from app.models import Difficulty, Pattern, Problem
+from app.models import Difficulty, Pattern, Problem, Stage
 
 
 def slugify(name: str) -> str:
@@ -46,6 +46,7 @@ def import_csv(csv_path: Path) -> None:
                     pattern = Pattern(
                         slug=pattern_slug,
                         name=pattern_name,
+                        stage=Stage.BASIC,
                         order_index=max_order + 1,
                         short_description="",
                         when_to_use="",
@@ -71,6 +72,15 @@ def import_csv(csv_path: Path) -> None:
                 problem.name = name
                 problem.difficulty = Difficulty(row["difficulty"].strip())
                 problem.leetcode_url = row["leetcode_url"].strip()
+                marker = "/problems/"
+                problem.leetcode_slug = (
+                    problem.leetcode_url.split(marker, 1)[1].strip("/").split("?", 1)[0]
+                    if marker in problem.leetcode_url
+                    else None
+                )
+                problem.tags = ",".join(
+                    t.strip() for t in row.get("tags", "").split("|") if t.strip()
+                ) or None
                 problem.hint = row.get("hint", "").strip()
                 if row.get("order", "").strip():
                     problem.order_index = int(row["order"])

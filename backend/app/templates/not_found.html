@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Not found · DSA Patterns{% endblock %}
 {% block content %}
-<h1>Pattern not found</h1>
-<p>No pattern with slug "{{ slug }}" exists.</p>
-<a href="/patterns">&larr; Back to patterns</a>
+<section class="empty-page">
+    <p class="pattern-index">404</p>
+    <h1>Pattern not found</h1>
+    <p class="page-sub">No pattern with the slug "{{ slug }}" exists.</p>
+    <a class="text-link" href="/patterns">Back to all patterns</a>
+</section>
 {% endblock %}

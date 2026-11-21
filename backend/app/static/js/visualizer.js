@@ -2,21 +2,33 @@
   "use strict";
 
   var COLORS = {
-    accent: "#6c8cff",
-    green: "#4caf50",
-    orange: "#ffa726",
-    red: "#ef5350",
-    muted: "#9aa0b0",
-    surface: "#262b3a",
-    surface2: "#1f2330",
-    border: "#3a4152",
-    text: "#e6e8ef",
+    accent: "#8FA6FF",
+    green: "#63C08A",
+    orange: "#F0B45A",
+    red: "#F07A6A",
+    muted: "#9FB0BC",
+    surface: "#18232C",
+    surface2: "#101820",
+    border: "#2A3540",
+    text: "#E8EDF2",
   };
 
   function resolveColor(c) {
     if (!c) return COLORS.surface;
     if (c[0] === "#") return c;
     return COLORS[c] || c;
+  }
+
+  function isLight(hex) {
+    if (!hex || hex[0] !== "#" || hex.length !== 7) return false;
+    var r = parseInt(hex.slice(1, 3), 16);
+    var g = parseInt(hex.slice(3, 5), 16);
+    var b = parseInt(hex.slice(5, 7), 16);
+    return 0.299 * r + 0.587 * g + 0.114 * b > 150;
+  }
+
+  function inkOn(fill) {
+    return isLight(fill) ? COLORS.surface2 : COLORS.text;
   }
 
   var SVG_NS = "http://www.w3.org/2000/svg";
@@ -39,7 +51,7 @@
       fill: opts.fill || COLORS.text,
       "font-size": opts.size || 13,
       "font-weight": opts.weight || "normal",
-      "font-family": "-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif",
+      "font-family": '"IBM Plex Mono", Consolas, monospace',
     });
     t.textContent = str;
     return t;
@@ -79,7 +91,7 @@
       var wEndX = startX + w.end * (boxW + gap) + boxW + 6;
       svg.appendChild(el("rect", {
         x: wx, y: mainY - 8, width: wEndX - wx, height: boxH + 16,
-        fill: "none", stroke: COLORS.accent, "stroke-width": 2.5, rx: 10,
+        fill: "none", stroke: COLORS.accent, "stroke-width": 2.5, rx: 2,
       }));
     }
 
@@ -95,8 +107,8 @@
       if (faded[i]) opacity = 0.28;
       if (hl[i] !== undefined) fill = resolveColor(hl[i]);
       var g = el("g", { opacity: opacity });
-      g.appendChild(el("rect", { x: x, y: mainY, width: boxW, height: boxH, rx: 8, fill: fill, stroke: COLORS.border, "stroke-width": 1.4 }));
-      g.appendChild(textEl(x + boxW / 2, mainY + boxH / 2 + 1, step.values[i], { size: 15 }));
+      g.appendChild(el("rect", { x: x, y: mainY, width: boxW, height: boxH, rx: 2, fill: fill, stroke: COLORS.border, "stroke-width": 1.4 }));
+      g.appendChild(textEl(x + boxW / 2, mainY + boxH / 2 + 1, step.values[i], { size: 15, fill: inkOn(fill) }));
       svg.appendChild(g);
     }
 
@@ -132,7 +144,7 @@
       step.secondary.forEach(function (chip) {
         var chipW = Math.max(50, chip.length * 6.6 + 16);
         if (sx + chipW > width - startX) { sx = startX; sy += 26; }
-        svg.appendChild(el("rect", { x: sx, y: sy, width: chipW, height: 20, rx: 10, fill: COLORS.surface2, stroke: COLORS.border, "stroke-width": 1 }));
+        svg.appendChild(el("rect", { x: sx, y: sy, width: chipW, height: 20, rx: 2, fill: COLORS.surface2, stroke: COLORS.border, "stroke-width": 1 }));
         svg.appendChild(textEl(sx + chipW / 2, sy + 11, chip, { size: 10.5, fill: COLORS.muted }));
         sx += chipW + 8;
       });
@@ -164,8 +176,8 @@
         if (hl[key]) fill = resolveColor(hl[key]);
         var opacity = faded[key] ? 0.3 : 1;
         var g = el("g", { opacity: opacity });
-        g.appendChild(el("rect", { x: x, y: y, width: cellSize - 3, height: cellSize - 3, rx: 5, fill: fill, stroke: COLORS.border, "stroke-width": 1 }));
-        if (val !== "") g.appendChild(textEl(x + (cellSize - 3) / 2, y + (cellSize - 3) / 2 + 1, val, { size: cellSize > 34 ? 13 : 10 }));
+        g.appendChild(el("rect", { x: x, y: y, width: cellSize - 3, height: cellSize - 3, rx: 2, fill: fill, stroke: COLORS.border, "stroke-width": 1 }));
+        if (val !== "") g.appendChild(textEl(x + (cellSize - 3) / 2, y + (cellSize - 3) / 2 + 1, val, { size: cellSize > 34 ? 13 : 10, fill: inkOn(fill) }));
         svg.appendChild(g);
       }
     }
@@ -187,8 +199,8 @@
       row.bits.forEach(function (bit, ci) {
         var x = labelW + ci * (boxSize + gap);
         var fill = hlCols[ci] ? COLORS.accent : COLORS.surface;
-        svg.appendChild(el("rect", { x: x, y: y, width: boxSize, height: boxSize, rx: 5, fill: fill, stroke: COLORS.border, "stroke-width": 1 }));
-        svg.appendChild(textEl(x + boxSize / 2, y + boxSize / 2 + 1, bit, { size: 14 }));
+        svg.appendChild(el("rect", { x: x, y: y, width: boxSize, height: boxSize, rx: 2, fill: fill, stroke: COLORS.border, "stroke-width": 1 }));
+        svg.appendChild(textEl(x + boxSize / 2, y + boxSize / 2 + 1, bit, { size: 14, fill: inkOn(fill) }));
       });
     });
   }
@@ -233,7 +245,7 @@
       svg.appendChild(el("circle", { cx: x, cy: y, r: 22, fill: fill, stroke: COLORS.border, "stroke-width": 1.5 }));
       var labelStr = String(n.label);
       var fontSize = labelStr.length > 4 ? 9.5 : 12.5;
-      svg.appendChild(textEl(x, y + 1, labelStr, { size: fontSize, fill: fill === COLORS.surface || fill === COLORS.surface2 ? COLORS.text : "#0f1117", weight: "600" }));
+      svg.appendChild(textEl(x, y + 1, labelStr, { size: fontSize, fill: inkOn(fill), weight: "600" }));
     });
   }
 
@@ -251,8 +263,9 @@
     step.items.forEach(function (it) {
       var x1 = px(it.start), x2 = px(it.end);
       var y = 15 + it.row * rowH;
-      svg.appendChild(el("rect", { x: x1, y: y, width: Math.max(4, x2 - x1), height: 26, rx: 6, fill: resolveColor(it.color), stroke: COLORS.border, "stroke-width": 1 }));
-      svg.appendChild(textEl((x1 + x2) / 2, y + 13, it.label, { size: 11, fill: "#0f1117", weight: "600" }));
+      var fill = resolveColor(it.color);
+      svg.appendChild(el("rect", { x: x1, y: y, width: Math.max(4, x2 - x1), height: 26, rx: 2, fill: fill, stroke: COLORS.border, "stroke-width": 1 }));
+      svg.appendChild(textEl((x1 + x2) / 2, y + 13, it.label, { size: 11, fill: inkOn(fill), weight: "600" }));
     });
   }
 
@@ -270,16 +283,18 @@
   }
 
   PatternVisualizer.prototype.buildDom = function () {
+    this.container.setAttribute("role", "group");
+    this.container.setAttribute("aria-label", "Step-by-step pattern trace");
     this.container.innerHTML =
       '<div class="viz-canvas-wrap"><svg class="viz-svg" xmlns="' + SVG_NS + '"></svg></div>' +
-      '<p class="viz-caption"></p>' +
+      '<p class="viz-caption" aria-live="polite" aria-atomic="true"></p>' +
       '<div class="viz-controls">' +
-      '<button type="button" class="viz-btn" data-action="reset" title="Restart">⟲</button>' +
-      '<button type="button" class="viz-btn" data-action="prev" title="Previous step">◀</button>' +
-      '<button type="button" class="viz-btn viz-play" data-action="play">▶ Play</button>' +
-      '<button type="button" class="viz-btn" data-action="next" title="Next step">▶</button>' +
-      '<span class="viz-step-label"></span>' +
-      '<select class="viz-speed" title="Playback speed">' +
+      '<button type="button" class="viz-btn" data-action="reset" title="Restart" aria-label="Restart">⟲</button>' +
+      '<button type="button" class="viz-btn" data-action="prev" title="Previous step" aria-label="Previous step">◀</button>' +
+      '<button type="button" class="viz-btn viz-play" data-action="play" aria-label="Play trace">▶ Play</button>' +
+      '<button type="button" class="viz-btn" data-action="next" title="Next step" aria-label="Next step">▶</button>' +
+      '<span class="viz-step-label" aria-hidden="true"></span>' +
+      '<select class="viz-speed" aria-label="Playback speed">' +
       '<option value="1700">Slow</option><option value="900" selected>Normal</option><option value="400">Fast</option>' +
       '</select>' +
       '</div>';
@@ -294,6 +309,9 @@
     this.container.querySelector('[data-action="prev"]').addEventListener("click", function () { self.stop(); self.goTo(self.index - 1); });
     this.container.querySelector('[data-action="next"]').addEventListener("click", function () { self.stop(); self.goTo(self.index + 1); });
     this.playBtn.addEventListener("click", function () { self.togglePlay(); });
+    this.speedSelect.addEventListener("change", function () {
+      if (self.timer) { self.stop(); self.togglePlay(); }
+    });
   };
 
   PatternVisualizer.prototype.goTo = function (i) {
@@ -321,6 +339,7 @@
     var self = this;
     if (this.index === this.trace.length - 1) this.index = -1;
     this.playBtn.textContent = "⏸ Pause";
+    this.playBtn.setAttribute("aria-label", "Pause trace");
     var delay = parseInt(this.speedSelect.value, 10);
     this.timer = setInterval(function () {
       if (self.index >= self.trace.length - 1) { self.stop(); return; }
@@ -331,6 +350,7 @@
   PatternVisualizer.prototype.stop = function () {
     if (this.timer) { clearInterval(this.timer); this.timer = null; }
     this.playBtn.textContent = "▶ Play";
+    this.playBtn.setAttribute("aria-label", "Play trace");
   };
 
   function init(containerId, traceUrl) {
