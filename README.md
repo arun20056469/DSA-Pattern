@@ -130,11 +130,16 @@ python scripts/build_seed.py
 # Validate seed links, uniqueness, stages, and difficulty mix
 python scripts/validate_seed.py
 
-# Smoke-check the running app on 127.0.0.1:8765
+# Smoke-check the running app (default 127.0.0.1:8000)
 python scripts/smoke_check.py
+# or: python scripts/smoke_check.py 8765
 ```
 
 API docs (Swagger UI): **http://127.0.0.1:8000/docs**
+
+## Deployment
+
+See [`DEPLOYMENT.md`](DEPLOYMENT.md) for Render and Railway configs that keep SQLite progress on a persistent `/data` volume.
 
 ### Adding more problems
 

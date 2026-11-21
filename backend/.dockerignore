@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+*.bak-*
+scripts/leetcode_catalog.json
+.pytest_cache/
